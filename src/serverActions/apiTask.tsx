@@ -1,8 +1,10 @@
 "use server";
 
 export type tTask = {
+  id: string;
   title: string;
   finished: boolean;
+  description: string;
 };
 
 export const cadastraTask = async (title: string) => {
@@ -23,6 +25,7 @@ export const cadastraTask = async (title: string) => {
 export const listaTasks = async () => {
   const response = await fetch(`${process.env.API_ROUTE}/api/tasks`, {
     method: "GET",
+    cache: "no-cache",
     next: { tags: ["updateTasks"] },
   });
   const data = await response.json();
