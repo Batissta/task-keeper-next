@@ -15,7 +15,7 @@ export default async function Home() {
           href={"/taskeeper"}
           className="text-zinc-300 flex gap-2 mt-12 hover:text-zinc-400 cursor-pointer"
         >
-          Visualize suas tarefas <MoveRight />
+          Visualize todas as suas tarefas <MoveRight />
         </Link>
       </div>
       <section className="flex">
@@ -33,6 +33,7 @@ export default async function Home() {
               key={`${i}_${task}`}
               title={task.title}
               finished={task.finished}
+              description={task.description}
             />
           ))}
         </ul>
