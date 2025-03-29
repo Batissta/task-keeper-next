@@ -19,17 +19,23 @@ export default async function Home() {
         </Link>
       </div>
       <section className="flex">
-        {dataSliced.length > 0 && (
-          <ul className="grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-10 gap-6">
-            {dataSliced.map((task, i) => (
-              <TaskCard
-                key={`${i}_${task}`}
-                title={task.title}
-                finished={task.finished}
-              />
-            ))}
-          </ul>
-        )}
+        <ul
+          className={`grow grid p-10 gap-6 ${
+            dataSliced.length === 1
+              ? "grid-cols-1"
+              : dataSliced.length === 2
+              ? "grid-cols-1 sm:grid-cols-2"
+              : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          }`}
+        >
+          {dataSliced.map((task, i) => (
+            <TaskCard
+              key={`${i}_${task}`}
+              title={task.title}
+              finished={task.finished}
+            />
+          ))}
+        </ul>
       </section>
     </main>
   );
