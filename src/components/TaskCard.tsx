@@ -14,7 +14,7 @@ const TaskCard = ({
   finished: boolean;
 }) => {
   return (
-    <Card className="min-w-[400px] font-(family-name:--font-poppins) p-6 bg-zinc-950 border-zinc-600 shadow-2xs shadow-zinc-600">
+    <Card className="font-(family-name:--font-poppins) p-6 bg-zinc-950 border-zinc-600 shadow-2xs shadow-zinc-600">
       <div className="justify-between items-center flex gap-6">
         <CardTitle className="text-xl font-[500] text-zinc-300 col-span-3">
           {title}
