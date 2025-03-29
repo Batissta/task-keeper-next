@@ -23,7 +23,7 @@ const CreateTaskCard = () => {
   return (
     <Card className="w-full h-[400px] py-0 border-zinc-600">
       <BackgroundBeamsWithCollision className="flex h-full flex-col items-center rounded-xl">
-        <CardTitle className="text-4xl text-start mb-8 font-black tracking-tight w-[80%]">
+        <CardTitle className="text-4xl text-center mb-8 font-black tracking-tight w-[80%]">
           Cadastre
           <FlipWords words={["suas tarefas!", "atividades!", "projetos!"]} />
         </CardTitle>
