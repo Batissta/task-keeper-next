@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  
+# 🧠 Task Keeper
 
-## Getting Started
+![image](https://github.com/user-attachments/assets/6ba0e068-d188-445f-b5e8-068a67d97289)
 
-First, run the development server:
+O intuito desse projeto é sair do convencional:
+as pessoas sempre estão fazendo to-do lists, mas acaba não sendo tão útil no dia-a-dia.<br>
+Por isso, surgiu a ideia de além de guardar suas tarefas, você pode criar um resumo delas em markdown. Você não precisa se limitar com pequenas tarefas, você pode planejar um final de semana, uma viagem ou até mesmo um projeto com o Task Keeper.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<div align="center">
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[![My Skills](https://skillicons.dev/icons?i=nextjs,react,tailwind,ts)](https://skillicons.dev)
 
-## Learn More
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+## ✍🏻 Autor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a><img src="https://gitlab.com/uploads/-/system/user/avatar/23003426/avatar.png" width="200"></a><br><br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Olá, Sou **Francinaldo Batista** <br>
 
-## Deploy on Vercel
+📍 **Localidade:** Campina Grande, Paraíba<br>
+🎓 **Formação:** Sistemas de informação - UniFacisa, 4° Semestre<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Me encontre no **LinkedIn:**<br>
+<a href="https://www.linkedin.com/in/francinaldobatista"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" width="100"></a>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Como Contribuir
+
+Deixa uma estrela no repositório e me siga no linkedin!
+Também possuo um canal no youtube. Se quiser conhecer, aqui está o link: [youtube.com/@Francinaldob](https://www.youtube.com/@Francinaldob) <Br>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)<br>
+
+**Made by _Francinaldo Batista_**
