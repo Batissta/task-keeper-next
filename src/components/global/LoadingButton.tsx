@@ -19,7 +19,7 @@ const LoadingButton = ({
         <Button
           disabled={desabilitado}
           variant="outline"
-          className="cursor-pointer hover:bg-transparent w-[80%]"
+          className="cursor-pointer hover:bg-transparent w-[100%]"
           onClick={onClick}
         >
           <CirclePlus />

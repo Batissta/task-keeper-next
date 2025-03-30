@@ -22,10 +22,13 @@ const CreateTaskCard = () => {
 
   return (
     <Card className="w-full h-[400px] py-0 border-zinc-600">
-      <BackgroundBeamsWithCollision className="flex h-full flex-col items-center rounded-xl">
-        <CardTitle className="text-4xl text-center mb-8 font-black tracking-tight w-[80%]">
+      <BackgroundBeamsWithCollision className="flex h-full flex-col items-center rounded-xl px-4">
+        <CardTitle className="text-3xl sm:text-4xl text-center mb-8 font-black tracking-tight">
           Cadastre
-          <FlipWords words={["suas tarefas!", "atividades!", "projetos!"]} />
+          <FlipWords
+            className="text-center"
+            words={["tarefas!", "atividades!", "projetos!"]}
+          />
         </CardTitle>
         <form
           onSubmit={(e) => e.preventDefault()}
@@ -33,12 +36,12 @@ const CreateTaskCard = () => {
         >
           <label
             htmlFor="taskTitle"
-            className="flex bg-transparent border border-zinc-600 placeholder:text-zinc-400 w-[80%] mx-auto px-2 py-1 rounded mb-4 text-zinc-600 gap-1"
+            className="flex bg-transparent border border-zinc-600 placeholder:text-zinc-400 w-[100%] mx-auto px-2 py-1 rounded mb-4 text-zinc-600 gap-1"
           >
             <Badge className="text-zinc-400" />
             <CardAction
               id="taskTitle"
-              placeholder="Digite o título de sua task"
+              placeholder="Título da Task"
               className="focus:outline-none grow"
               value={title}
               onChange={({ target }) => setTitle(target.value)}
