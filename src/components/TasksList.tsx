@@ -19,6 +19,7 @@ const TasksList = async () => {
       {data.tasks.map((task, i) => (
         <TaskCard
           key={`${task.title}_${i}`}
+          id={task.id}
           title={task.title}
           finished={task.finished}
           description={task.description}
