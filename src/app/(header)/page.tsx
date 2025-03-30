@@ -13,7 +13,7 @@ export default async function Home() {
         <CreateTaskCard />
         <Link
           href={"/taskeeper"}
-          className="text-zinc-300 flex gap-2 mt-12 hover:text-zinc-400 cursor-pointer"
+          className="text-zinc-300 flex gap-2 mt-12 hover:text-zinc-400 cursor-pointer items-center"
         >
           Visualize todas as suas tarefas <MoveRight />
         </Link>
