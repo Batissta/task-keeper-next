@@ -12,7 +12,7 @@ enum ePaths {
 }
 
 const HeaderNav = () => {
-  const mobile = useMedia("(width <= 800px)");
+  const mobile = useMedia("(width <= 842px)");
   if (!mobile)
     return (
       <nav>
