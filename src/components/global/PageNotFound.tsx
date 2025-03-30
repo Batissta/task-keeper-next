@@ -1,7 +1,7 @@
 import React from "react";
-import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
-import { FlipWords } from "./ui/FlipWords";
-import { Button } from "./ui/button";
+import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
+import { FlipWords } from "../ui/FlipWords";
+import { Button } from "../ui/button";
 import { MoveUpLeft, MoveUpRight } from "lucide-react";
 import Link from "next/link";
 
