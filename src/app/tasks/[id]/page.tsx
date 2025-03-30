@@ -1,4 +1,4 @@
-import PageNotFound from "@/components/PageNotFound";
+import PageNotFound from "@/components/global/PageNotFound";
 import { listaTask } from "@/serverActions/apiTask";
 
 type TaskParams = {

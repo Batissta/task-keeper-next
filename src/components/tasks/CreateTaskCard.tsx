@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { Card, CardAction, CardTitle } from "./ui/card";
-import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
-import LoadingButton from "./LoadingButton";
+import { Card, CardAction, CardTitle } from "../ui/card";
+import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
+import LoadingButton from "../global/LoadingButton";
 import { cadastraTask } from "@/serverActions/apiTask";
 import { Badge } from "lucide-react";
 import { revalidateTagAction } from "@/serverActions/revalidatePathAction";
-import { FlipWords } from "./ui/FlipWords";
+import { FlipWords } from "../ui/FlipWords";
 
 const CreateTaskCard = () => {
   const [loading, setLoading] = React.useState<boolean>(false);

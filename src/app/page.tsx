@@ -1,5 +1,5 @@
-import CreateTaskCard from "@/components/CreateTaskCard";
-import TaskCard from "@/components/TaskCard";
+import CreateTaskCard from "@/components/tasks/CreateTaskCard";
+import TaskCard from "@/components/tasks/TaskCard";
 import { listaTasks } from "@/serverActions/apiTask";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";

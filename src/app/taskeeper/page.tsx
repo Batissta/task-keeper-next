@@ -1,5 +1,5 @@
-import Loading from "@/components/Loading";
-import TasksList from "@/components/TasksList";
+import Loading from "@/components/global/Loading";
+import TasksList from "@/components/tasks/TasksList";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import React, { Suspense } from "react";
