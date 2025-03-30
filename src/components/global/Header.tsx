@@ -11,7 +11,7 @@ const Header = async () => {
         width={220}
         height={220}
         alt="Taskeeper Logo"
-        className="w-[100px] md:w-[150px] lg:w-[220px]"
+        className="w-[150px] lg:w-[220px]"
         sizes="15vw"
       />
       <HeaderNav />
