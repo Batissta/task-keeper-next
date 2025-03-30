@@ -31,6 +31,7 @@ export default async function Home() {
           {dataSliced.map((task, i) => (
             <TaskCard
               key={`${i}_${task}`}
+              id={task.id}
               title={task.title}
               finished={task.finished}
               description={task.description}
