@@ -9,12 +9,10 @@ import { redirect } from "next/navigation";
 const TaskCard = ({
   id,
   title,
-  description,
   finished,
 }: {
   id: string;
   title: string;
-  description: string;
   finished: boolean;
 }) => {
   const handleClick = () => {
@@ -40,9 +38,9 @@ const TaskCard = ({
       <Separator className="bg-zinc-700" />
       <div>
         <p className="text-zinc-500">
-          {description
-            ? `${description.slice(0, 120)}...`
-            : "Vou criar um componente aqui para dizer que ainda não tem uma descrição para essa atividade"}
+          Clicando no botão abaixo, você consegue planejar sua tarefa {'"'}
+          {title}
+          {'"'}! Não perca tempo!
         </p>
         <Button
           onClick={handleClick}
