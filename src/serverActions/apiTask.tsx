@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidateTagAction } from "./revalidatePathAction";
+
 export type tTask = {
   id: string;
   title: string;
@@ -39,6 +41,20 @@ export const listaTask = async (id: string) => {
     next: { tags: ["updateOneTask"] },
   });
   const data = await response.json();
+  return { sucess: !data.message ? true : false, task: data.task as tTask };
+};
 
-  return { sucess: !data.message ? true : false, tasks: data.tasks as tTask };
+export const updateTask = async (id: string, body: tTask) => {
+  const response = await fetch(`${process.env.API_ROUTE}/api/tasks/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+    next: { tags: ["updateTask"] },
+  });
+  revalidateTagAction("updateOneTask");
+  const data = await response.json();
+
+  return { sucess: !data.message ? true : false, task: data.task as tTask };
 };
