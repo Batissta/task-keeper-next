@@ -14,9 +14,9 @@ const Task = async ({ params }: { params: TaskParams }) => {
 
   if (!data.sucess) return <PageNotFound />;
   return (
-    <section className="bg-zinc-950 h-screen max-h-screen">
-      <div className="grid grid-cols-[16rem_1fr]">
-        <aside className="px-6 bg-zinc-900">
+    <section className="bg-zinc-950 min-h-screen">
+      <div className="grid grid-cols-[16rem_1fr] relative">
+        <aside className="px-6 bg-zinc-900 sticky top-0 bottom-0 h-screen">
           <div className="flex px-1 text-zinc-50 justify-between items-center">
             <div className="group flex gap-1">
               <button className="bg-zinc-500 rounded-full w-4 h-4 group-hover:bg-red-400 duration-75" />
@@ -31,7 +31,7 @@ const Task = async ({ params }: { params: TaskParams }) => {
             </Button>
           </div>
         </aside>
-        <div className="grid bg-zinc-800">
+        <div className="flex flex-col bg-zinc-800">
           <div className="px-6" datatype="editorHeader">
             <div className="flex gap-2 text-zinc-200">
               <Button
