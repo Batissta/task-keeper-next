@@ -41,6 +41,7 @@ const CreateTaskCard = () => {
             <Badge className="text-zinc-400" />
             <CardAction
               id="taskTitle"
+              autoComplete="off"
               placeholder="Título da Task"
               className="focus:outline-none grow"
               value={title}
@@ -49,6 +50,7 @@ const CreateTaskCard = () => {
           </label>
 
           <LoadingButton
+            type="card"
             loading={loading}
             desabilitado={title.length > 0 ? false : true}
             onClick={handleSubmit}
