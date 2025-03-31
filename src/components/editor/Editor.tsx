@@ -34,7 +34,7 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
     },
     editorProps: {
       attributes: {
-        class: "outline-none text-zinc-700 prose prose-inverse",
+        class: "outline-none text-zinc-700 prose prose-inverse font-[300]",
       },
     },
   });
@@ -43,7 +43,7 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
     <>
       <div className="flex flex-col justify-center gap-6 font-(family-name:--font-poppins) py-12 px-8 sm:px-12 w-[80%] mx-auto">
         <div className="grid grid-cols-[1fr_2rem] justify-between items-center">
-          <h1 className="text-4xl text-zinc-900 border-b border-b-zinc-100 font-[700]">
+          <h1 className="text-4xl text-zinc-900 border-b border-b-zinc-100 font-[500]">
             <input
               className="outline-none pb-1 w-full h-full"
               type="text"
