@@ -28,7 +28,7 @@ const LoadingButton = ({
         >
           {type === "save" && (
             <>
-              <Save />
+              <Save className="text-zinc-50" />
             </>
           )}
           {type === "card" && (
@@ -43,11 +43,11 @@ const LoadingButton = ({
         <Button
           disabled
           className={`cursor-pointer hover:bg-transparent w-[100%] ${
-            type === "save" ? "bg-zinc-100 border-none text-zinc-800" : ""
+            type === "save" ? "bg-transparent border-none text-zinc-800" : ""
           }`}
           onClick={onClick}
         >
-          <Loader2 className="animate-spin" />
+          <Loader2 className="animate-spin text-zinc-50" />
         </Button>
       )}
     </>

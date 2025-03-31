@@ -5,6 +5,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { Bold, Code, Italic, Strikethrough } from "lucide-react";
 import { useState } from "react";
 import LoadingButton from "../global/LoadingButton";
+import BubbleButton from "./BubbleButton";
 
 const EditorBase = ({ title, description, id, finished }: tTask) => {
   const [titulo, setTitulo] = useState<string>(title);
@@ -34,16 +35,16 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
     },
     editorProps: {
       attributes: {
-        class: "outline-none text-zinc-700 prose prose-inverse font-[300]",
+        class: "outline-none text-zinc-200 font-[300]",
       },
     },
   });
 
   return (
     <>
-      <div className="flex flex-col justify-center gap-6 font-(family-name:--font-poppins) py-12 px-8 sm:px-12 w-[80%] mx-auto">
-        <div className="grid grid-cols-[1fr_2rem] justify-between items-center">
-          <h1 className="text-4xl text-zinc-900 border-b border-b-zinc-100 font-[500]">
+      <div className="flex flex-col justify-center gap-6 font-(family-name:--font-poppins) py-12 px-8 sm:px-12 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-[1fr_2rem] justify-between items-center border-b border-b-zinc-100">
+          <h1 className="text-3xl text-zinc-100 font-[500]">
             <input
               className="outline-none pb-1 w-full h-full"
               type="text"
@@ -59,7 +60,7 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
           />
         </div>
         <EditorContent
-          className={`${classNameScroll} grow my-0 overflow-y-auto text-zinc-700 prose prose-violet border border-transparent min-h-[70vh] min-w-full font-[300]`}
+          className={`${classNameScroll} grow my-0 overflow-y-auto text-zinc-200 prose prose-invert prose-violet border border-transparent min-h-[70vh] min-w-full font-[300]`}
           editor={editor}
         />
         {editor && (
@@ -67,18 +68,18 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
             className="bg-zinc-700 shadow-xl border border-zinc-600 shadow-black/20 rounded-lg overflow-hidden flex divide-x divide-zinc-600"
             editor={editor}
           >
-            <button className="p-2 text-zinc-200 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-50 hover:bg-zinc-600">
-              <Bold width={24} height={24} />
-            </button>
-            <button className="p-2 text-zinc-200 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-50 hover:bg-zinc-600">
-              <Italic width={24} height={24} />
-            </button>
-            <button className="p-2 text-zinc-200 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-50 hover:bg-zinc-600">
-              <Strikethrough width={24} height={24} />
-            </button>
-            <button className="p-2 text-zinc-200 text-sm flex items-center gap-1.5 font-medium leading-none hover:text-zinc-50 hover:bg-zinc-600">
-              <Code width={24} height={24} />
-            </button>
+            <BubbleButton>
+              <Bold className="w-4 h-4" />
+            </BubbleButton>
+            <BubbleButton>
+              <Italic className="w-4 h-4" />
+            </BubbleButton>
+            <BubbleButton>
+              <Strikethrough className="w-4 h-4" />
+            </BubbleButton>
+            <BubbleButton>
+              <Code className="w-4 h-4" />
+            </BubbleButton>
           </BubbleMenu>
         )}
       </div>
