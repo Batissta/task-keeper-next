@@ -1,5 +1,6 @@
 "use client";
 import { tTask, updateTask } from "@/serverActions/apiTask";
+import Placeholder from "@tiptap/extension-placeholder";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useState } from "react";
@@ -27,7 +28,12 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
   };
 
   const editor = useEditor({
-    extensions: [StarterKit.configure({ heading: { levels: [1, 2, 3] } })],
+    extensions: [
+      StarterKit.configure({ heading: { levels: [1, 2, 3] } }),
+      Placeholder.configure({
+        placeholder: "Escreva '/' para abrir o menu...",
+      }),
+    ],
     content: `${descricao}`,
     immediatelyRender: false,
     onUpdate: ({ editor }) => {
