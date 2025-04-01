@@ -1,11 +1,12 @@
 "use client";
 import { tTask, updateTask } from "@/serverActions/apiTask";
-import { useEditor, EditorContent, BubbleMenu } from "@tiptap/react";
+import Placeholder from "@tiptap/extension-placeholder";
+import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { Bold, Code, Italic, Strikethrough } from "lucide-react";
 import { useState } from "react";
 import LoadingButton from "../global/LoadingButton";
-import BubbleButton from "./BubbleButton";
+import FloatingMenuComponent from "./FloatingMenuComponent";
+import BubbleMenuComponent from "./BubbleMenuComponent";
 
 const EditorBase = ({ title, description, id, finished }: tTask) => {
   const [titulo, setTitulo] = useState<string>(title);
@@ -27,7 +28,12 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
   };
 
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit.configure({ heading: { levels: [1, 2, 3] } }),
+      Placeholder.configure({
+        placeholder: "Escreva '/' para abrir o menu...",
+      }),
+    ],
     content: `${descricao}`,
     immediatelyRender: false,
     onUpdate: ({ editor }) => {
@@ -35,14 +41,14 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
     },
     editorProps: {
       attributes: {
-        class: "outline-none text-zinc-200 font-[300]",
+        class: "outline-none text-zinc-200 font-[300] leading-[1.1]",
       },
     },
   });
 
   return (
     <>
-      <div className="flex flex-col justify-center gap-6 font-(family-name:--font-poppins) py-12 px-8 sm:px-12 max-w-[800px] mx-auto">
+      <div className=" flex flex-col justify-center gap-6 font-(family-name:--font-poppins) py-12 px-8 sm:px-12 w-full max-w-[800px] mx-auto">
         <div className="grid grid-cols-[1fr_2rem] justify-between items-center border-b border-b-zinc-100">
           <h1 className="text-3xl text-zinc-100 font-[500]">
             <input
@@ -60,28 +66,11 @@ const EditorBase = ({ title, description, id, finished }: tTask) => {
           />
         </div>
         <EditorContent
-          className={`${classNameScroll} grow my-0 overflow-y-auto text-zinc-200 prose prose-invert prose-violet border border-transparent min-h-[70vh] min-w-full font-[300]`}
+          className={`${classNameScroll} grow my-0 overflow-y-auto text-zinc-200 prose prose-invert prose-violet border border-transparent min-w-full font-[300]`}
           editor={editor}
         />
-        {editor && (
-          <BubbleMenu
-            className="bg-zinc-700 shadow-xl border border-zinc-600 shadow-black/20 rounded-lg overflow-hidden flex divide-x divide-zinc-600"
-            editor={editor}
-          >
-            <BubbleButton>
-              <Bold className="w-4 h-4" />
-            </BubbleButton>
-            <BubbleButton>
-              <Italic className="w-4 h-4" />
-            </BubbleButton>
-            <BubbleButton>
-              <Strikethrough className="w-4 h-4" />
-            </BubbleButton>
-            <BubbleButton>
-              <Code className="w-4 h-4" />
-            </BubbleButton>
-          </BubbleMenu>
-        )}
+        {editor && <FloatingMenuComponent editor={editor} />}
+        {editor && <BubbleMenuComponent editor={editor} />}
       </div>
     </>
   );

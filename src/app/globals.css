@@ -115,3 +115,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.tiptap p.is-empty::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
