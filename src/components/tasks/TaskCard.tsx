@@ -5,6 +5,7 @@ import { Asterisk, Check, MoveUpRight } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { Button } from "../ui/button";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
 const TaskCard = ({
   id,
@@ -37,6 +38,13 @@ const TaskCard = ({
       </div>
       <Separator className="bg-zinc-700" />
       <div>
+        <Image
+          src={"/Pencil.png"}
+          alt="notebook illustration"
+          className="mx-auto opacity-20"
+          width={128}
+          height={128}
+        />
         <p className="text-zinc-500">
           Clicando no botão abaixo, você consegue planejar sua tarefa {'"'}
           {title}
